@@ -9,7 +9,6 @@ Vue.component('front-list', {
   created: function () {
     this.$http.get('/api/articles').then(function(response) {
       this.articles = response.body;
-      console.log(response.body)
     });
   },
   template: '<ul><li v-for="article in this.articles">{{ article.title[0].value }}</li></ul>'
