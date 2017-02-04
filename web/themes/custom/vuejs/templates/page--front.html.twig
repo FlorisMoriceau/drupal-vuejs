@@ -79,11 +79,13 @@
         <main id="content" class="column main-content" role="main">
           <section class="section">
             <a id="main-content" tabindex="-1"></a>
+
             {% verbatim %}
               <div id="drupal-vuejs">
-                {{ message }}
+                <front-list :articles='articles' />
               </div>
             {% endverbatim %}
+
           </section>
         </main>
         {% if page.sidebar_first %}

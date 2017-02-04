@@ -1,20 +1,18 @@
 Vue.use(VueResource);
 
 Vue.component('front-list', {
-  data:function() {
-    return {
-      articles:[]
-    }
-  },
-  created: function () {
-    this.$http.get('/api/articles').then(function(response) {
-      this.articles = response.body;
-    });
-  },
+  props:["articles"],
   template: '<ul><li v-for="article in this.articles">{{ article.title[0].value }}</li></ul>'
 });
 
-var app = new Vue({
+new Vue({
   el: '#drupal-vuejs',
-  template:"<front-list />"
+  data:{
+    articles:[],
+  },
+  mounted:function() {
+    this.$http.get('/api/articles').then(function(response) {
+      this.articles = response.body;
+    });
+  }
 });
