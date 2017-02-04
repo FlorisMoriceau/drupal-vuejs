@@ -739,6 +739,10 @@
     'bower_components',
   ];
   
+  
+  $settings['install_profile'] = 'standard';
+  $config_directories['sync'] = 'sites/default/files/config/sync';
+  
   /**
    * Load local development override configuration, if available.
    *
@@ -753,3 +757,6 @@
   if(file_exists($app_root.'/'.$site_path.'/settings.local.php')) {
     include $app_root.'/'.$site_path.'/settings.local.php';
   }
+  
+
+  
