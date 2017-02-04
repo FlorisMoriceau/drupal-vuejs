@@ -1,21 +1,18 @@
+Vue.use(VueResource);
 
 Vue.component('front-list', {
   data:function() {
     return {
-      articles:[
-        {
-          title:"titre 1"
-        },
-        {
-          title:"titre 2"
-        },
-        {
-          title:"titre 3"
-        }
-      ]
+      articles:[]
     }
   },
-  template: '<ul><li v-for="article in this.articles">{{ article.title }}</li></ul>'
+  created: function () {
+    this.$http.get('/api/articles').then(function(response) {
+      this.articles = response.body;
+      console.log(response.body)
+    });
+  },
+  template: '<ul><li v-for="article in this.articles">{{ article.title[0].value }}</li></ul>'
 });
 
 var app = new Vue({
