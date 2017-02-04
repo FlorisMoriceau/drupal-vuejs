@@ -1,7 +1,7 @@
 {
-  "name": "drupal-vuejs",
-  "description": "A Drupal + Vue.js project",
-  "version": "1.0.0",
+  "name": "drupal8-vuejs-webpack",
+  "description": "Drupal8 - Vue.js - webpack",
+  "version": "0.7.0",
   "author": "yann <yann.boisselier@gmail.com>",
   "private": true,
   "scripts": {
