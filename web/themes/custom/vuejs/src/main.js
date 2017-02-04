@@ -1,9 +1,10 @@
-Vue.use(VueResource);
+import Vue from 'vue'
+import VueResource from 'vue-resource'
+import VueRouter from 'vue-router'
 
-Vue.component('front-list', {
-  props:["articles"],
-  template: '<ul><li v-for="article in this.articles">{{ article.title[0].value }}</li></ul>'
-});
+import FrontList from './FrontList.vue'
+
+Vue.use(VueResource);
 
 new Vue({
   el: '#drupal-vuejs',
@@ -14,5 +15,8 @@ new Vue({
     this.$http.get('/api/articles').then(function(response) {
       this.articles = response.body;
     });
+  },
+  components:{
+    FrontList
   }
 });
