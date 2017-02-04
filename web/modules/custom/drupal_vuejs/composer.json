@@ -1,0 +1,14 @@
+{
+  "name": "drupal/drupal_vuejs",
+  "type": "drupal-module",
+  "description": "The module provides a developement environment for VueJS in Drupal",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/drupal_vuejs",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/drupal_vuejs",
+    "source": "http://cgit.drupalcode.org/drupal_vuejs"
+  },
+  "require": { }
+}

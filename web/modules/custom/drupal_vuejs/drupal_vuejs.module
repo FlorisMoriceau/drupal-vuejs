@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains drupal_vuejs.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function drupal_vuejs_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the drupal_vuejs module.
+    case 'help.page.drupal_vuejs':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The module provides a development environment for VueJS in Drupal') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function drupal_vuejs_theme() {
+  return [
+    'drupal_vuejs' => [
+      'template' => 'drupal_vuejs',
+      'render element' => 'children',
+    ],
+  ];
+}
