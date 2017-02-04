@@ -1,0 +1,14 @@
+name: vuejs
+type: theme
+description: Drupal VueJS Demo Theme
+package: Theme
+core: 8.x
+libraries:
+  - vuejs/global-styling
+  - vuejs/drupal-vuejs
+
+base theme: bartik
+
+regions:
+  content: Content
+  header: Header

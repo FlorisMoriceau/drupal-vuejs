@@ -1,0 +1,16 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      css/global.css: {}
+  js:
+    js/global.js: {}
+  dependencies:
+    - core/jquery
+
+drupal-vuejs:
+  js:
+    node_modules/vue/dist/vue.js: {}
+    node_modules/vue-resource/dist/vue-resource.js: {}
+    js/drupal-vuejs.js: {}
+

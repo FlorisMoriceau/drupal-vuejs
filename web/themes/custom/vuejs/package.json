@@ -1,0 +1,16 @@
+{
+  "name": "uikitty",
+  "version": "0.0.0",
+  "description": "UIkitty 2.x is a lightweight and modular front-end framework for developing fast and powerful web interfaces with Drupal 8.x",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "~2.1.10",
+    "vue-resource": "~1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD"
+}
